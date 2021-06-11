@@ -1,0 +1,53 @@
+.player {
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%) translateY(-5px);
+    transition: all .3s;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.player>* {
+    flex: 1;
+}
+
+.progress {
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    height: 15px;
+    transition: height 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    /* cursor: ew-resize; */
+}
+
+.progress__filled {
+    flex: 0;
+    flex-basis: 20%;
+}
+
+.timer {
+    text-align: center;
+}
+
+.play-container {
+    opacity: 0;
+    display: none;
+    transition: all 2s ease-out;
+}
+
+.play-container.active {
+    opacity: 1;
+    display: initial;
+}
+
+#file-selector-container {
+    opacity: 1;
+    transition: all 1s ease-out;
+}
+
+#file-selector-container.active {
+    opacity: 0;
+}
